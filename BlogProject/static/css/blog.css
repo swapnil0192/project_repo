@@ -1,0 +1,39 @@
+.content{
+  width: 60%;
+  float: left;
+  padding: 0 0 0 30px; /*PADDING IS THE DISTANCE BETWEEN CONTENT AND BORDER WHEREAS 1ST 0 IS TOP 2ED IS RIGHT SIDE 3RD IS BOTTOM AND 30PX IS MARGIN FROM LEFT SIDE*/
+  background: lightblue;
+  height: 100%
+}
+.sidebar{
+  width: 40%;
+  float: right;
+  padding: 10px;
+  background: #1ad1ff;
+  height: 100%
+}
+h1{
+  text-align: center;
+  border-bottom: 1px solid #fff ;
+  padding-bottom: 10px;
+}
+body{
+  color: black ;
+  background: lightblue;
+}
+#date,#ch{
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}
+#ch{
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+  border-bottom: 2px solid white;
+}
+#pcount{
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}

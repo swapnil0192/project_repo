@@ -1,0 +1,20 @@
+{%extends 'BlogApp/base.html'%}
+{%block title_block%}SWAPNIL'S BLOG HOME PAGE{%endblock%}
+{%block content%}
+  <h1>SWAPNIL's BLOG</h1>
+  {%if tag%}
+    <h2>Similar post for "{{tag.name}}"</h2>
+  {%endif%}
+  {%for post in post_list%}
+  <h2><a href="{{post.get_absolute_url}}">{{post.title}}</a></h2>
+  <p id='date'>Published on {{post.publish}} By {{post.author|title}}</p>
+  <p>Tags:
+    {%for tag in post.tags.all%}
+      <a href="{%url 'post_list_by_tag_name' tag.slug%}" class='btn btn-info btn-sm'>{{tag.name}}</a>
+    {%endfor%}
+  </p>
+  {{post.body|truncatewords:30|linebreaks}}
+    {%endfor%}
+{%include 'BlogApp/pagination.html' with page=post_list%}  <!--IT IS FOR FBV PAGINATION-->
+<!--  {%include 'BlogApp/pagination.html' with page=page_obj%}IT IS FOR CBV PAGINATION-->
+{%endblock%}
